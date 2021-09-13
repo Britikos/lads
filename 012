@@ -1,0 +1,26 @@
+#include <fstream>
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    setlocale(LC_ALL,"r");
+    int a,b;
+    ifstream fin;
+    fin.open("aplusbb.in.txt");
+    ofstream fout;
+    fout.open("aplusbb.out.txt");
+    if (!fout.is_open() or !fin.is_open())
+    {
+        cout<<"Error";
+    }
+    else
+    {
+         fin >> a>>b;
+         fout << a+b*b << endl;
+    }
+    fin.close();
+    fout.close();
+    return 0;
+
+}
